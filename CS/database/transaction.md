@@ -14,14 +14,27 @@
 
 ### 트랜잭션 레벨 (격리수준)
 
-- READ UNCOMMITTED
-- READ COMMITTED
-- REPEATABLE READ
-  자신의 트랜잭션 번호보다 낮은 트랜잭션 번호에서 변경된(+커밋된) 것만 보게 되는 것
-- SERIALIZABLE
+- `READ UNCOMMITTED`
+  - 커밋하지 않은 변경사항을 다른 트랜잭션이 볼 수 있음
+  - 트랜잭션 A가 값을 변경한 뒤, 트랜잭션 B가 읽음
+  - 트랜잭션 A가 롤백함. 트랜잭션 B는 이미 읽었던 값을 가지고 로직 수행 (Dirty Read)
+- `READ COMMITTED`
+  - 커밋된 변경사항만 다른 트랜잭션이 볼 수 있음
+  - 트랜잭션A가 값을 변경함. 트랜잭션B가 읽음 (커밋되지 않았으므로 변경되지 않은 값)
+  - 트랜잭션A가 커밋하고, 트랜잭션B가 다시 값을 읽음 -> 변경된 값이 읽힘
+  - 한 트랜잭션 내에서 다른 값이 읽힐 수 있으므로 NON-REPEATABLE READ 부정합 문제 발생
+- `REPEATABLE READ`
+  - 자신의 트랜잭션 번호보다 낮은 트랜잭션 번호에서 변경된(+커밋된) 것만 보게 되는 것
+  - NON-REPEATABLE READ 부정합이 발생하지 않음
+  - 트랜잭션1이 값 조회, 트랜잭션2가 값 변경, 커밋
+  - 트랜잭션1이 다시 조회, 언두 영역에서 백업된 데이터 반환
+  - Update 부정합이 발생할 수 있음
+- `SERIALIZABLE`
+  - 가장 엄격한 격리수준
+  - 읽기 작업에도 공유 장금을 설정하게 되고, 다른 트랜잭션에서 레코드를 변경하지 못하게 된다.
 
 아래로 내려갈 수록 고립정도는 높아지고, 성능은 떨어진다
-(oracle = READ COMMITTED, mysql = REPEATABLE READ)
+(기본값 oracle = READ COMMITTED, mysql = REPEATABLE READ)
 
 #### Dirty READ
 
@@ -38,6 +51,11 @@ B 트랜잭션은 10번 사원이 여전히 28살이라고 생각하고 로직�
 
 한 트랜잭션 내에서 같은 쿼리를 두번 실행했는데 첫번째 쿼리에서 없던 레코드가 두번째 쿼리에서 나타나는 것
 
+#### Update 부정합
+
+REPEATABLE READ에서 발생할 수 있는 문제
+트랜잭션2에서 update를 수행하면, 트랜잭션1에서 언두영역의 데이터를 읽게 되는데 트랜잭션1이 Update를 수행하려하면 언두영역이기때문에 쓰기잠금을 걸 수 없고, 트랜잭션2에 의해 값이 바뀌어 트랜잭션1이 읽고있는 것과 일치하는 데이터가 존재하지 않게 되어 트랜잭션1의 Update가 적용되지 않는다.
+
 ### Commit
 
 트랜잭션이 성공적으로 끝나서 데이터베이스가 일관성있는 상태가 되었을 때 완료되었음을 알려주는 연산
@@ -52,3 +70,8 @@ B 트랜잭션은 10번 사원이 여전히 28살이라고 생각하고 로직�
 - rollback 과정
 - 스프링의 @Transactional 작동 원리
 - 하나의 DB가 아닌 여러 DB에 대해 어떻게 Transaction을 적용할 수 있을까?
+
+#### 참고자료
+
+https://joont92.github.io/db/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-isolation-level/
+https://d2.naver.com/helloworld/407507
