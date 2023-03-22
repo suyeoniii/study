@@ -126,7 +126,7 @@ IP = 인터넷 프로토콜(Internet Protocal)
 - UDP 헤더의 checksum 필드로 최소한의 오류 검출
 - 신뢰성보다 연속성이 중요한 실시간 서비스 등에 주로 사용됨
 
-<img src='../image/tcp-udp.png>
+<img src='../image/tcp-udp.png'>
 
 #### 더 찾아볼것
 
