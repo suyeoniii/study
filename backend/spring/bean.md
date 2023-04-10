@@ -8,6 +8,7 @@ Spring 컨테이너에 의해 관리되는 자바 객체
 
 스프링 빈의 생명주기를 관리하며, 생성된 스프링 빈에 추가적인 기능을 제공한다.
 IoC, DI 원리가 적용됨
+<img src='../../image/spring-container.webp'>
 
 ### 스프링 빈 등록 방법
 
@@ -122,3 +123,4 @@ Singleton은 컨테이너가 사라질 때까지 컨테이너에 의해 관리�
 #### 참고자료
 
 https://steady-coding.tistory.com/594
+https://dodeon.gitbook.io/study/kimyounghan-spring-core-principle/04-spring-container-and-bean
