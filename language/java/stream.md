@@ -33,6 +33,12 @@ Stream<String> stream = list.stream();
 - 스트림 결과 생성
   - .sum(), .count(), reduce(), collect(), foreach() 등
 
+### anyMatch, allMatch
+
+- filter와 비슷한 듯
+- allMatch는 배열의 원소가 조건을 모두 만족하면 true
+- anyMatch는 배열의 원소가 하나라도 조건을 만족하면 true
+
 #### 참고자료
 
 https://hbase.tistory.com/171
