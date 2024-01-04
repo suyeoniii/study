@@ -17,3 +17,7 @@
 - [NamedParameterJdbcTemplate]('../../../../backend/spring/jdbc.md')
 - [Cron 표현식]('../../../../backend/spring/schedule.md)
 - [Kotlin 레이블]('../../../../language/kotlin/etc.md')
+
+`04`
+
+- [kotlin의 object]('../../../../language/kotlin/object.md')

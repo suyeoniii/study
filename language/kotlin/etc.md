@@ -18,3 +18,8 @@ numbers.forEachIndexed { index, value ->
     println("Index: $index, Value: $value")
 }
 ```
+
+### static
+
+- 코틀린에서는 자바의 static을 지원하지 않음
+- companion object (동반 객체)를 사용하면 정적 메서드, 정적 필드호출 같이 사용할 수 있음
