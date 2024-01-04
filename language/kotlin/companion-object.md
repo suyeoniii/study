@@ -1,4 +1,4 @@
-## companion object
+## companion object (동반 객체)
 
 ### 개념
 
