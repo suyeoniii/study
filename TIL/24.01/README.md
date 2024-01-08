@@ -21,3 +21,12 @@
 `04`
 
 - [kotlin의 object]('../../../../language/kotlin/object.md')
+
+`05`
+
+- [DTO&VO]('../../../../language/java/dto&vo.md')
+
+`08`
+
+- [Springboot의 Logging]('../../../../spring/logging.md')
+- [Git branch - trunk based developement]('../../../../git/branch/trunk-based-development.md')
