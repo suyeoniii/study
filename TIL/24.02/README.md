@@ -2,4 +2,4 @@
 
 `26`
 
-- [linux - file]('../../../../linux/file.md')
+- [linux - 파일 출력, 편집 명령어 정리]('../../../../linux/nano&echo&touch&cat&vi.md')
