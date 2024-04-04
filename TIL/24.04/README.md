@@ -8,5 +8,10 @@
 
 `03`
 
-- [Database Lock](../../book/database-lock.md)
-- [쿠버네티스](../../book/kubernetes.md)
+- [Database Lock](../../book/database-lock.md) 완료
+- [쿠버네티스](../../book/kubernetes.md) (80%)
+
+`04`
+
+- [쿠버네티스](../../book/kubernetes.md) 완료
+- [리액트 상태관리](../../frontend/web/react-state.md) (50%)
