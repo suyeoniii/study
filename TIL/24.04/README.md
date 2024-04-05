@@ -15,3 +15,8 @@
 
 - [쿠버네티스](../../book/kubernetes.md) 완료
 - [리액트 상태관리](../../frontend/web/react-state.md) (50%)
+
+`05`
+
+- [리액트 상태관리](../../frontend/web/react-state.md) 완료
+- [JVM Garbage Collection](../../language/java/garbageCollection.md) 공부
