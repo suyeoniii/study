@@ -8,15 +8,20 @@
 
 `03`
 
-- [Database Lock](../../book/database-lock.md) 완료
+- [Database Lock](../../book/database-lock.md) (100%)
 - [쿠버네티스](../../book/kubernetes.md) (80%)
 
 `04`
 
-- [쿠버네티스](../../book/kubernetes.md) 완료
+- [쿠버네티스](../../book/kubernetes.md) (100%)
 - [리액트 상태관리](../../frontend/web/react-state.md) (50%)
 
 `05`
 
-- [리액트 상태관리](../../frontend/web/react-state.md) 완료
+- [리액트 상태관리](../../frontend/web/react-state.md) (100%)
 - [JVM Garbage Collection](../../language/java/garbageCollection.md) 공부
+
+`18`
+
+- [IntelliJ](../../productivity/IDE/intelliJ.md) 단축키, 디버깅 공부
+- https://mangkyu.tistory.com/145 단위테스트 공부
