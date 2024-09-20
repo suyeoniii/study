@@ -63,3 +63,34 @@
 - [kotlin - Companion object](../../language/kotlin/companion-object.md)
   - 예전에 정리해둔 내용이 있어서 다시 읽어봄
   - `클래스의 멤버 변수는 인스턴스 생성시에 생성됨. 공통으로 사용되는 경우 companion object 안에 정의하면, 클래스 로딩 시 생성됨` <- 이게 핵심인듯
+
+`11`
+
+- [MySQL에서 SQL 문장 가독성 향상](https://yozm.wishket.com/magazine/detail/2758/) 읽음
+
+  - DISTINCT는 함수처럼 괄호붙여서 사용하는거 지양하기, 결과가 똑같으므로
+  - A LEFT JOIN B 사용 시, 드리븐 테이블(A)에 대한 조건은 where 절에 명시하면 inner join처럼 동작함. on 절에 명시해야함
+  - 페이징을 위한 limit n m 사용 시, order by 절 명시하기
+  - group by 절에 명시되지 않은 컬럼을 select절에서 참조하는 경우 집계함수 사용 (의도에 맞게)
+  - AND, OR 조건을 사용할 때, 괄호로 묶어주기
+  - 데이터 건수 조회는 count(\*) 사용하기
+
+- [exposed](https://github.com/JetBrains/Exposed) - Jetbrains 개발한 kotlin ORM 라이브러리
+  - 사용법 정도 간단히 훓어봄. 나중에 개인 프로젝트에 적용해보면 좋을 듯
+
+`20`
+
+- 요즘 프론트엔드쪽 역량을 더 키워보고 싶다는 생각을 해서, 디자인 시스템에 대해 찾아봄
+- [잘 쓰이는 디자인 시스템을 위한 여정](https://medium.com/29cm/%EC%9E%98-%EC%93%B0%EC%9D%B4%EB%8A%94-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%97%AC%EC%A0%95-7c4fe03f32b7)
+  - MFA (Micro Frontend Architecture) 라는 개념을컨퍼런스에서 얼핏 들어봤었는데, 줄여서 MFA라고 하네 (인증하는 MFA 인줄)
+  - Headless UI - 스타일이 없는 UI 라이브러리
+    - Headless UI 도입을 통해 상태 관리, 동작 구현 리소스 줄일 수 있었음, ark-ui 사용
+- [플랫폼 팀 없는 오픈 소스 기반의 디자인 시스템 구축 회고](https://tech.inflab.com/20240224-design-system/)
+  - 스토리북, mantine, 피그마 플러그인 등 사용
+  - 내용이 많아서 다 이해하진 못했음
+- 디자인 시스템
+  - 디자인 시스템의 핵심은 공통 컴포넌트 관리에 있는 것 같다고 느낌
+  - 디자이너와 개발자 사이 소통 비용을 줄일 수 있음
+  - 주로 사용하는 툴은 무엇일지 조사해봐야할 듯
+- 인프런 - Real Mysql 1 강의 조금 들음 (char vs varchar)
+  - 길이 명시할 때 적히는 숫자 varchar(255) 이런게 바이트 크기인지, 문자 길이인지 헷갈렸었는데 문자 길이이고, 영어냐 한글이냐 이모지냐에 따라 디스크에 저장되는 저장공간(바이트)의 차이가 있는 것
